@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.inditex</groupId>
+	<artifactId>AvroUtils</artifactId>
+	<version>1.0.0</version>
+	<name>AvroUtils</name>
+	<description>Generation of avsc Files</description>
+	<properties>
+      <java.version>11</java.version>
+      <maven.compiler.source>11</maven.compiler.source>
+      <maven.compiler.target>11</maven.compiler.target>
+	</properties>
+	<dependencies>
+
+      <dependency>
+          <groupId>org.apache.avro</groupId>
+          <artifactId>avro</artifactId>
+          <version>1.9.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.apache.avro</groupId>
+          <artifactId>avro-tools</artifactId>
+          <version>1.9.2</version>
+          <exclusions>
+              <exclusion>
+                  <artifactId>slf4j-api</artifactId>
+                  <groupId>org.slf4j</groupId>
+              </exclusion>
+          </exclusions>
+      </dependency>
+      <dependency>
+          <groupId>com.jayway.jsonpath</groupId>
+          <artifactId>json-path</artifactId>
+          <version>2.4.0</version>
+      </dependency>
+	</dependencies>
+
+</project>
